@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Container, Row } from "react-bootstrap";
 import "./FoodItems.css";
 import allFoods from "../../fakeData/allFoods";
 import SingleFood from "../SingleFood/SingleFood";
 import { Link } from "react-router-dom";
+import { UserAndCartContext } from "../../App";
 
 const FoodItems = () => {
   const [currentItems, setCurrentItems] = useState([]);
+  const { cart } = useContext(UserAndCartContext);
 
   if (currentItems.length === 0) {
     const defaultCurrentItems = allFoods.filter(
@@ -22,8 +24,11 @@ const FoodItems = () => {
     setCurrentItems(selectedCurrentItems);
   };
 
+  //visibility toggling checkout button visibility
+  const disabled = cart.length ? false : true;
+
   return (
-    <section classNamem="foodItems-section">
+    <section className="foodItems-section">
       <div className="types">
         <Link onClick={() => handelCurrentItemClick("breakfast")}>
           Breakfast
@@ -38,7 +43,15 @@ const FoodItems = () => {
           ))}
         </Row>
         <div className="text-center mt-4">
-          <button className="checkout-button">Checkout Your Food</button>
+          <Link to="/checkout">
+            <button
+              onClick={() => console.log("CheckOut clicked")}
+              disabled={disabled}
+              className="checkout-button disabled"
+            >
+              Checkout Your Food
+            </button>
+          </Link>
         </div>
       </Container>
     </section>

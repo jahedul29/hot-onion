@@ -1,0 +1,30 @@
+.form-container {
+  margin: auto;
+  width: 380px;
+}
+.signing-form {
+  width: 100%;
+}
+.form-container input {
+  width: 100%;
+  margin: 12px 0;
+  height: 50px;
+  background-color: #e4e1e180;
+  border-radius: 5px;
+}
+
+.form-img {
+  width: 100%;
+}
+
+.error {
+  color: red;
+}
+
+.submit-btn {
+  background-color: rgb(255, 0, 76) !important;
+  color: white !important;
+}
+.toggle-btn {
+  color: rgb(255, 0, 76) !important;
+}

@@ -4,15 +4,20 @@ import {
   faShoppingCart,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { useParams } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
+import { UserAndCartContext } from "../../App";
 import allFoods from "../../fakeData/allFoods";
 import "./FoodDetails.css";
 
 const FoodDetails = () => {
   const { foodId } = useParams();
   const [count, setCount] = useState(0);
+  const { cart, setCart } = useContext(UserAndCartContext);
+  let history = useHistory();
+  let { from } = { from: { pathname: "/" } };
+  const [feedBack, setFeedBack] = useState("");
 
   const currentFood = allFoods.find((food) => food.id === parseInt(foodId));
   console.log(foodId);
@@ -27,6 +32,35 @@ const FoodDetails = () => {
       setCount(count - 1);
     }
   };
+
+  // Function to handle add to cart functionality
+  /* More Logic can be applied*/
+  const handleAddToCart = (foodItem) => {
+    const isExist = cart.find((food) => food.id === foodItem.id);
+    if (isExist && count === isExist.quantity) {
+      setFeedBack("Please check the item in cart");
+    } else if (count > 0) {
+      const newFoodItem = { ...foodItem };
+      newFoodItem.quantity = count;
+
+      const newCart = [...cart, newFoodItem];
+      setCart(newCart);
+
+      setFeedBack("Item Added To Cart");
+
+      // history.replace(from);
+    } else {
+      setFeedBack("Please select a valid amount");
+    }
+  };
+
+  // Feedback of Add to button click
+  let feedBackSpan;
+  if (feedBack.includes("Added")) {
+    feedBackSpan = <span style={{ color: "green" }}>{feedBack}</span>;
+  } else if (feedBack.includes("Please")) {
+    feedBackSpan = <span style={{ color: "red" }}>{feedBack}</span>;
+  }
 
   return (
     <Container>
@@ -56,13 +90,19 @@ const FoodDetails = () => {
               </div>
             </div>
             <br />
-            <button className="addto-cart">
+            <button
+              onClick={() => handleAddToCart(currentFood)}
+              className="addto-cart"
+            >
               <FontAwesomeIcon
                 className="mr-3"
                 icon={faShoppingCart}
               ></FontAwesomeIcon>
               Add
             </button>
+            <br />
+            <br />
+            {feedBackSpan}
           </div>
         </Col>
         <Col className="text-center" sm={12} md={6}>

@@ -33,3 +33,6 @@
   border: none;
   color: #fff;
 }
+.checkout-button:disabled {
+  background-color: gray;
+}

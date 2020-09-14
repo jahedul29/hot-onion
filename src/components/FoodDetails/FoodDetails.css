@@ -16,6 +16,11 @@
   border: none;
 }
 
+.addto-cart:active {
+  border: none !important;
+  background-color: rgb(182, 46, 87);
+}
+
 .foodDetails-img {
   width: 85%;
 }
