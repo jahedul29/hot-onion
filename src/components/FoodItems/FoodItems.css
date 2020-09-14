@@ -1,0 +1,27 @@
+.types {
+  margin: 2% 0;
+  text-align: center;
+}
+.types a {
+  margin: 2%;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  position: relative;
+}
+
+.types a:hover,
+.types a:active {
+  color: rgb(255, 0, 76);
+  text-decoration: none;
+}
+
+.types a:hover::after,
+.types a:active::after {
+  content: "";
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  bottom: -5px;
+  border: 2px solid rgb(255, 0, 76);
+}

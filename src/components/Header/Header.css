@@ -1,0 +1,10 @@
+.nav a {
+  color: black !important;
+  font-weight: 400;
+  padding: 0 1%;
+}
+
+.nav a:active {
+  border-radius: 20px;
+  background-color: rgb(255, 0, 76);
+}
