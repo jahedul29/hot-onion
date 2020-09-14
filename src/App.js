@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
+import FoodDetails from "./components/FoodDetails/FoodDetails";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import Notfound from "./components/Notfound/Notfound";
@@ -15,6 +16,9 @@ function App() {
         </Route>
         <Route path="/home">
           <Home />
+        </Route>
+        <Route path="/food/:foodId">
+          <FoodDetails />
         </Route>
         <Route path="*">
           <Notfound />

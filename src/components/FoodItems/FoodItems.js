@@ -37,6 +37,9 @@ const FoodItems = () => {
             <SingleFood key={food.id} food={food}></SingleFood>
           ))}
         </Row>
+        <div className="text-center mt-4">
+          <button className="checkout-button">Checkout Your Food</button>
+        </div>
       </Container>
     </section>
   );

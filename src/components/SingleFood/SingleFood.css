@@ -10,3 +10,10 @@
 .single-food:hover {
   box-shadow: 2px 2px 10px gray;
 }
+
+.singlefood-link,
+.singlefood-link:hover,
+.singlefood-link:active {
+  text-decoration: none;
+  color: black;
+}

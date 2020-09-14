@@ -25,3 +25,11 @@
   bottom: -5px;
   border: 2px solid rgb(255, 0, 76);
 }
+
+.checkout-button {
+  background-color: rgb(255, 0, 76);
+  padding: 0.5% 5%;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+}
