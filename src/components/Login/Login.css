@@ -25,6 +25,10 @@
   background-color: rgb(255, 0, 76) !important;
   color: white !important;
 }
+
+.submit-btn:disabled {
+  background-color: gray !important;
+}
 .toggle-btn {
   color: rgb(255, 0, 76) !important;
 }
