@@ -4,7 +4,7 @@ var allFoods = [
     name: "Fried Chicken Bento",
     description: "This is Fried chicken bento",
     price: 9.99,
-    photo: "/images/lunch/lunch2.png",
+    photo: "https://i.imgur.com/fWhgOnj.png",
     category: "lunch",
   },
   {
@@ -12,7 +12,7 @@ var allFoods = [
     name: "Tarragon-Rubbed-Salmon",
     description: "This is Tarragon-Rubbed-Salmon",
     price: 6.99,
-    photo: "/images/lunch/lunch3.png",
+    photo: "https://i.imgur.com/CKY81P9.png",
     category: "lunch",
   },
   {
@@ -20,7 +20,7 @@ var allFoods = [
     name: "Indian Lunch",
     description: "This is Indian Lunch",
     price: 8.99,
-    photo: "/images/lunch/lunch4.png",
+    photo: "https://i.imgur.com/2hzf2Lt.png",
     category: "lunch",
   },
   {
@@ -28,7 +28,7 @@ var allFoods = [
     name: "Best Stoak",
     description: "This is Best Stoak",
     price: 15.99,
-    photo: "/images/lunch/lunch5.png",
+    photo: "https://i.imgur.com/C8Uknuk.png",
     category: "lunch",
   },
   {
@@ -36,7 +36,7 @@ var allFoods = [
     name: "Bangladeshi Meal",
     description: "This is Tarragon-Rubbed-Salmon",
     price: 30.99,
-    photo: "/images/lunch/lunch6.png",
+    photo: "https://i.imgur.com/qYtLWrz.png",
     category: "lunch",
   },
   {
@@ -44,7 +44,7 @@ var allFoods = [
     name: "Bagel and cream cheese",
     description: "This is Bagel and cream cheese",
     price: 6.99,
-    photo: "/images/Breakfast/breakfast1.png",
+    photo: "https://i.imgur.com/p9ulz9K.png",
     category: "breakfast",
   },
   {
@@ -52,7 +52,7 @@ var allFoods = [
     name: "Breakfast Sandwich",
     description: "This is Breakfast Sandwich",
     price: 9.99,
-    photo: "/images/Breakfast/breakfast2.png",
+    photo: "https://i.imgur.com/PXo8lpu.png",
     category: "breakfast",
   },
   {
@@ -60,7 +60,7 @@ var allFoods = [
     name: "Backed Chicken",
     description: "This is Backed Chicken",
     price: 10.99,
-    photo: "/images/Breakfast/breakfast3.png",
+    photo: "https://i.imgur.com/cWJBqxn.png",
     category: "breakfast",
   },
   {
@@ -68,7 +68,7 @@ var allFoods = [
     name: "Eggs Benedict",
     description: "This is Eggs Benedict",
     price: 8.99,
-    photo: "/images/Breakfast/breakfast4.png",
+    photo: "https://i.imgur.com/k98acKS.png",
     category: "breakfast",
   },
   {
@@ -76,7 +76,7 @@ var allFoods = [
     name: "Toast Croissant Fried egg",
     description: "This is Toast Croissant Fried egg",
     price: 19.99,
-    photo: "/images/Breakfast/breakfast5.png",
+    photo: "https://i.imgur.com/yJIYQxk.png",
     category: "breakfast",
   },
   {
@@ -84,7 +84,7 @@ var allFoods = [
     name: "Full Breakfast Fried Egg toast",
     description: "This is Healthy",
     price: 3.99,
-    photo: "/images/Breakfast/breakfast6.png",
+    photo: "https://i.imgur.com/ANlJ2KE.png",
     category: "breakfast",
   },
   {
@@ -92,7 +92,7 @@ var allFoods = [
     name: "Salmon with grapefruit",
     description: "This is Healthy",
     price: 9.99,
-    photo: "/images/Dinner/dinner1.png",
+    photo: "https://i.imgur.com/owkOG3B.png",
     category: "dinner",
   },
   {
@@ -100,7 +100,7 @@ var allFoods = [
     name: "Lemony Salmon Piccata",
     description: "This is Healthy",
     price: 10.99,
-    photo: "/images/Dinner/dinner2.png",
+    photo: "https://i.imgur.com/zMqqPoE.png",
     category: "dinner",
   },
   {
@@ -108,7 +108,7 @@ var allFoods = [
     name: "Pork Tenderion With Quinoa",
     description: "This is Healthy",
     price: 12.99,
-    photo: "/images/Dinner/dinner3.png",
+    photo: "https://i.imgur.com/dFWLuVu.png",
     category: "dinner",
   },
   {
@@ -116,7 +116,7 @@ var allFoods = [
     name: "French fries with cheese",
     description: "This is Healthy",
     price: 8.99,
-    photo: "/images/Dinner/dinner4.png",
+    photo: "https://i.imgur.com/JmGvd99.png",
     category: "dinner",
   },
   {
@@ -124,7 +124,7 @@ var allFoods = [
     name: "Gurlic Butter Backed Salmon",
     description: "This is Healthy",
     price: 6.99,
-    photo: "/images/Dinner/dinner5.png",
+    photo: "https://i.imgur.com/ILsFBHZ.png",
     category: "dinner",
   },
   {
@@ -132,7 +132,7 @@ var allFoods = [
     name: "Backed Chicken",
     description: "This is Healthy",
     price: 9.99,
-    photo: "/images/Dinner/dinner6.png",
+    photo: "https://i.imgur.com/FU37QNi.png",
     category: "dinner",
   },
   {
@@ -140,7 +140,7 @@ var allFoods = [
     name: "Chicken Biriyani",
     description: "This is Fried chicken biriyani",
     price: 22.99,
-    photo: "/images/lunch/lunch1.png",
+    photo: "https://i.imgur.com/R1aLpkY.png",
     category: "lunch",
   },
 ];

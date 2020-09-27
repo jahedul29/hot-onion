@@ -1,9 +1,9 @@
 .banner {
   width: 100%;
   height: 450px;
+  background: url("https://i.imgur.com/9HhZff3.png");
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   position: relative;
 }
 #search-button {
@@ -13,4 +13,9 @@
 }
 .input-container {
   width: 420px;
+}
+
+.search-input:focus {
+  box-shadow: none !important;
+  font-weight: 550;
 }

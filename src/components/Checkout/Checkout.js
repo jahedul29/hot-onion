@@ -4,15 +4,19 @@ import { UserAndCartContext } from "../../App";
 import CartItem from "../CartItem/CartItem";
 // Code Copied from login
 import { useForm } from "react-hook-form";
+import { useHistory } from "react-router-dom";
 
 const Checkout = () => {
   const { cart } = useContext(UserAndCartContext);
   const { register, handleSubmit, errors, getValues } = useForm();
   const [deliveryDetails, setDeliveryDetails] = useState({});
+  const [disabled, setDisabled] = useState(true);
+  let history = useHistory();
 
   // Delivery details still not used
   const onSubmit = (data) => {
     setDeliveryDetails(data);
+    setDisabled(false);
   };
 
   const subtotal = cart.reduce((total, item) => {
@@ -27,11 +31,10 @@ const Checkout = () => {
   }
   const grandTotal = subtotal + deliveryFee + tax;
 
-  // Place order button disability
-  const disabled = deliveryDetails ? true : false;
+  console.log(disabled);
 
   return (
-    <Container>
+    <Container className="my-5">
       <Row>
         {/* Checkout form */}
         <Col sm={12} md={8}>
@@ -139,7 +142,13 @@ const Checkout = () => {
                 <span>${Math.round(grandTotal)}</span>
               </div>
               <br />
-              <button disabled={disabled} className="form-control submit-btn">
+              <button
+                onClick={() => {
+                  history.replace("/confirmed");
+                }}
+                disabled={disabled}
+                className="form-control submit-btn"
+              >
                 Place Order
               </button>
             </div>

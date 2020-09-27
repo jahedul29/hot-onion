@@ -80,7 +80,7 @@ const Login = () => {
         {loggedInUser.email && <h5>Welcome {loggedInUser.name}</h5>}
         <img
           className="form-img"
-          src={process.env.PUBLIC_URL + "/images/logo/logo2.png"}
+          src={process.env.PUBLIC_URL + "https://i.imgur.com/XJbs0Lf.png"}
           alt=""
         />
         <form className="signing-form" onSubmit={handleSubmit(onSubmit)}>

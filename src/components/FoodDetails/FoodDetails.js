@@ -46,24 +46,20 @@ const FoodDetails = () => {
       const newCart = [...cart, newFoodItem];
       setCart(newCart);
 
-      setFeedBack("Item Added To Cart");
-
-      // history.replace(from);
+      history.replace(from);
     } else {
       setFeedBack("Please select a valid amount");
     }
   };
 
   // Feedback of Add to button click
-  let feedBackSpan;
-  if (feedBack.includes("Added")) {
-    feedBackSpan = <span style={{ color: "green" }}>{feedBack}</span>;
-  } else if (feedBack.includes("Please")) {
+  let feedBackSpan = "";
+  if (feedBack.includes("Please")) {
     feedBackSpan = <span style={{ color: "red" }}>{feedBack}</span>;
   }
 
   return (
-    <Container>
+    <Container className="my-5">
       <Row>
         <Col
           className="d-flex flex-column justify-content-center"
@@ -106,11 +102,7 @@ const FoodDetails = () => {
           </div>
         </Col>
         <Col className="text-center" sm={12} md={6}>
-          <img
-            className="foodDetails-img"
-            src={process.env.PUBLIC_URL + photo}
-            alt=""
-          />
+          <img className="foodDetails-img" src={photo} alt="" />
         </Col>
       </Row>
     </Container>

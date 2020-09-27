@@ -31,7 +31,7 @@ const Header = () => {
         <Link to="/">
           <img
             className="logo w-50"
-            src={`${process.env.PUBLIC_URL}/images/logo/logo2.png`}
+            src="https://i.imgur.com/XJbs0Lf.png"
             alt=""
           />
         </Link>

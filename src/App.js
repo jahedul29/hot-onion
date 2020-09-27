@@ -3,10 +3,12 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Checkout from "./components/Checkout/Checkout";
 import FoodDetails from "./components/FoodDetails/FoodDetails";
+import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
 import Notfound from "./components/Notfound/Notfound";
+import OrderConfirmed from "./components/OrderConfirmed/OrderConfirmed";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 
 export const UserAndCartContext = createContext();
@@ -24,27 +26,37 @@ function App() {
       value={{ cart, setCart, loggedInUser, setLoggedInUser }}
     >
       <Router>
-        <Header></Header>
+        <Header />
         <Switch>
           <Route exact path="/">
             <Home />
           </Route>
+
           <Route path="/home">
             <Home />
           </Route>
+
           <Route path="/food/:foodId">
             <FoodDetails />
           </Route>
           <Route path="/login">
             <Login />
           </Route>
-          <Route to="/checkout">
+
+          <Route path="/checkout">
             <Checkout />
           </Route>
+
+          <Route path="/confirmed">
+            <OrderConfirmed />
+          </Route>
+
           <Route path="*">
             <Notfound />
           </Route>
         </Switch>
+
+        <Footer />
       </Router>
     </UserAndCartContext.Provider>
   );

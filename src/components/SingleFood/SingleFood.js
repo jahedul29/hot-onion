@@ -8,14 +8,10 @@ const SingleFood = (props) => {
   console.log(photo);
 
   return (
-    <Col className="text-center" sm={12} md={4}>
+    <Col className="text-center" sm={6} md={4}>
       <Link className="singlefood-link" to={`/food/${id}`}>
         <div className="single-food">
-          <img
-            className="foodItem-img"
-            src={process.env.PUBLIC_URL + photo}
-            alt=""
-          />
+          <img className="foodItem-img" src={photo} alt="" />
           <h6>{name}</h6>
           <p>{description}</p>
           <h4>${price}</h4>
