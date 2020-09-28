@@ -75,7 +75,7 @@ const Login = () => {
   console.log(loggedInUser);
 
   return (
-    <Container>
+    <Container className="my-5">
       <div className="form-container">
         {loggedInUser.email && <h5>Welcome {loggedInUser.name}</h5>}
         <img

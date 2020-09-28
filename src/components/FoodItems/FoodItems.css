@@ -11,19 +11,20 @@
 }
 
 .types a:hover,
-.types a:active {
+.types a:focus {
   color: rgb(255, 0, 76);
   text-decoration: none;
 }
 
 .types a:hover::after,
-.types a:active::after {
+.types a:focus::after {
   content: "";
   position: absolute;
   left: 10%;
   right: 10%;
   bottom: -5px;
   border: 2px solid rgb(255, 0, 76);
+  border-radius: 40%;
 }
 
 .checkout-button {
@@ -32,6 +33,10 @@
   border-radius: 10px;
   border: none;
   color: #fff;
+}
+
+.checkout-button:active {
+  border: none;
 }
 .checkout-button:disabled {
   background-color: gray;

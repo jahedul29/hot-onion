@@ -43,13 +43,13 @@ function App() {
             <Login />
           </Route>
 
-          <Route path="/checkout">
+          <PrivateRoute path="/checkout">
             <Checkout />
-          </Route>
+          </PrivateRoute>
 
-          <Route path="/confirmed">
+          <PrivateRoute path="/confirmed">
             <OrderConfirmed />
-          </Route>
+          </PrivateRoute>
 
           <Route path="*">
             <Notfound />

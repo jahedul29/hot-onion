@@ -5,7 +5,6 @@ import "./SingleFood.css";
 
 const SingleFood = (props) => {
   const { name, description, price, category, photo, id } = props.food;
-  console.log(photo);
 
   return (
     <Col className="text-center" sm={6} md={4}>

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Container, Row } from "react-bootstrap";
 import "./FoodItems.css";
 import allFoods from "../../fakeData/allFoods";
@@ -9,6 +9,7 @@ import { UserAndCartContext } from "../../App";
 const FoodItems = () => {
   const [currentItems, setCurrentItems] = useState([]);
   const { cart } = useContext(UserAndCartContext);
+  const [loading, setLoading] = useState(false);
 
   if (currentItems.length === 0) {
     const defaultCurrentItems = allFoods.filter(
@@ -17,6 +18,7 @@ const FoodItems = () => {
     setCurrentItems(defaultCurrentItems);
   }
 
+  //! Need To use UseEffect
   const handelCurrentItemClick = (category) => {
     const selectedCurrentItems = allFoods.filter(
       (food) => food.category === category
@@ -33,7 +35,13 @@ const FoodItems = () => {
         <Link onClick={() => handelCurrentItemClick("breakfast")}>
           Breakfast
         </Link>
-        <Link onClick={() => handelCurrentItemClick("lunch")}>Lunch</Link>
+        <Link
+          className="active"
+          id="lunchLink"
+          onClick={() => handelCurrentItemClick("lunch")}
+        >
+          Lunch
+        </Link>
         <Link onClick={() => handelCurrentItemClick("dinner")}>Dinner</Link>
       </div>
       <Container>

@@ -19,8 +19,24 @@
 .addto-cart:active {
   border: none !important;
   background-color: rgb(182, 46, 87);
+  border: none;
 }
 
 .foodDetails-img {
-  width: 85%;
+  width: 80%;
+}
+.swiper-wrapper {
+  width: 350px;
+  list-style-type: none;
+}
+.swiper-slide {
+  width: 30% !important;
+}
+
+.swiper-slide img {
+  width: 80%;
+}
+
+.swiper-scrollbar {
+  display: none;
 }

@@ -13,7 +13,7 @@ const OrderConfirmed = () => {
   const { loggedInUser } = useContext(UserAndCartContext);
 
   return (
-    <Container>
+    <Container className="my-5">
       <Row>
         <Col sm={12} md={8}>
           <div className="d-flex flex-column align-items-center">

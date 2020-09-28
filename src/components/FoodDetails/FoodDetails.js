@@ -10,6 +10,12 @@ import { useHistory, useParams } from "react-router-dom";
 import { UserAndCartContext } from "../../App";
 import allFoods from "../../fakeData/allFoods";
 import "./FoodDetails.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.css";
+
+// install Swiper components
+import SwiperCore, { Navigation, Scrollbar, A11y, Autoplay } from "swiper";
+SwiperCore.use([Navigation, Scrollbar, A11y, Autoplay]);
 
 const FoodDetails = () => {
   const { foodId } = useParams();
@@ -18,9 +24,19 @@ const FoodDetails = () => {
   let history = useHistory();
   let { from } = { from: { pathname: "/" } };
   const [feedBack, setFeedBack] = useState("");
+  const [activeSlide, setActiveSlide] = useState(0);
 
-  const currentFood = allFoods.find((food) => food.id === parseInt(foodId));
-  console.log(foodId);
+  let currentFood;
+  if (activeSlide === 0) {
+    currentFood = allFoods.find((food) => food.id === parseInt(foodId));
+  } else {
+    console.log(activeSlide);
+    currentFood = allFoods.find((food) => food.id === activeSlide);
+  }
+
+  const totalFoods = allFoods.filter(
+    (food) => food.category === currentFood.category
+  );
 
   const { name, description, price, photo } = currentFood;
 
@@ -100,6 +116,27 @@ const FoodDetails = () => {
             <br />
             {feedBackSpan}
           </div>
+
+          {/* Swiper */}
+          <br />
+          <Swiper
+            spaceBetween={1}
+            slidesPerView={"auto"}
+            wrapperTag="ul"
+            navigation
+            centeredSlides={true}
+            scrollbar={{ draggable: true }}
+            pagination={{ clickable: true }}
+            onSwiper={(swiper) => console.log(swiper)}
+            onSlideChange={(swiper) => setActiveSlide(swiper.activeIndex + 1)}
+          >
+            {totalFoods.map((food) => (
+              <SwiperSlide tag="li" key={food.id}>
+                {" "}
+                <img src={food.photo} alt="" />{" "}
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </Col>
         <Col className="text-center" sm={12} md={6}>
           <img className="foodDetails-img" src={photo} alt="" />

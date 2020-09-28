@@ -15,7 +15,7 @@ const Banner = () => {
               className="form-control border-0 bg-light search-input"
             />
             <div className="input-group-append">
-              <button id="search-button" type="submit" class="btn">
+              <button id="search-button" type="submit" className="btn">
                 Search
               </button>
             </div>
